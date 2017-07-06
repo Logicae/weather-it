@@ -13,3 +13,11 @@
   font-size: large;
 }
 
+.box {
+  width: 40%;
+  margin: 2em;
+  padding: 2em;
+  background-color: #1c365b;
+  color: #fff;
+  display: inline-block;
+}
