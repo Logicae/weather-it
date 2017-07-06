@@ -11,11 +11,28 @@ constructor() {
   this.state = {
     reports: []
   }
+
+  this.createReport = this.createReport.bind(this)
 }
 
-  componentDidMount() {
-    return fetch('/reports', {
-      method: 'GET',
+createReport(newReport) {
+  return fetch('/reports', {
+    method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+          },
+            body: JSON.stringify(newReport)
+        })
+  .then(response => response.json())
+  .then(report => this.setState({
+    reports: this.state.reports.concat(report)
+  }))
+  .catch(err => console.log(err))
+}
+
+componentDidMount() {
+  return fetch('/reports', {
+    method: 'GET',
       headers: {
         'Accepts': 'application/json',
         'Content-Type': 'application/json'
@@ -32,7 +49,7 @@ constructor() {
 
     return (
       <div className="App">
-        <ReportForm />
+        <ReportForm createReport= { this.createReport } />
 
         {this.state.reports.map((report) => {
           return (
