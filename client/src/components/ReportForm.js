@@ -27,7 +27,7 @@ export default class BookForm extends Component {
 
     render() {
         return (
-            <form >
+            <form onSubmit={(event) => this.handleOnSubmit(event)}>
                 <h2 className = "App-header">
                     Report Local Weather
                 </h2>
