@@ -12,6 +12,8 @@ export default class BookForm extends Component {
     }
 
     handleOnSubmit(event) {
+        event.preventDefault();
+
         return fetch('/reports', {
             method: 'POST',
             headers: {
@@ -19,10 +21,15 @@ export default class BookForm extends Component {
             },
             body: JSON.stringify(this.state)
         })
+        .then(response => response.json())
+        .then(report => console.log(report))
+        .catch(err => console.log(err))
     }
 
     handleOnCityChange(event) {
-        alert(event.target.value)
+        this.setState({
+            city: event.target.value
+        })
     }
 
     render() {
