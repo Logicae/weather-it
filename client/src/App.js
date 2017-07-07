@@ -22,9 +22,6 @@ createReport(newReport) {
             body: JSON.stringify(newReport)
         })
   .then(response => response.json())
-  .then(report => this.setState({
-    reports: this.state.reports.concat(report)
-  }))
   .catch(err => console.log(err))
 }
 
@@ -37,7 +34,6 @@ componentDidMount() {
       },
     })
       .then(response => response.json())
-      .then(reports => this.setState({ reports }))
       .catch(err => console.log(err))
   }
 
@@ -49,7 +45,7 @@ handleRouteChange = routeName => this.props.changeRoute({ routeName: routeName }
     return (
       <div className="App">
         <div className = 'nav-bar'> 
-          <Nav/>
+          <Nav />
         </div> 
         <ReportForm createReport= { this.createReport } />
         
