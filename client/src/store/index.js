@@ -1,12 +1,17 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import fetchingData from '../reducers/fetchingDataReducer'
 import route from '../reducers/routeReducer'
 import weatherData from '../reducers/weatherDataReducer'
 
-export default createStore(
+const reducers = combineReducers ({
     fetchingData,
     route,
+    weatherData
+})
+
+export default createStore(
+    reducers,
     applyMiddleware(...middlewares)
 )
 
