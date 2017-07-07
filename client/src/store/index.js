@@ -4,6 +4,8 @@ import fetchingData from '../reducers/fetchingDataReducer'
 import route from '../reducers/routeReducer'
 import weatherData from '../reducers/weatherDataReducer'
 
+const middlewares = [ thunk ]
+
 const reducers = combineReducers ({
     fetchingData,
     route,
@@ -12,7 +14,6 @@ const reducers = combineReducers ({
 
 export default createStore(
     reducers,
-    applyMiddleware(...middlewares)
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    applyMiddleware(...middlewares),
 )
-
-const middlewares = [ thunk ]

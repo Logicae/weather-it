@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import ReportForm from './components/ReportForm';
+import { connect } from 'react-redux';
+import { changeRoute } from './actions/routeActions'
 
 
 class App extends Component {
 
 constructor() {
   super()
-
-  this.state = {
-    reports: []
-  }
 
   this.createReport = this.createReport.bind(this)
 }
@@ -43,14 +41,21 @@ componentDidMount() {
       .catch(err => console.log(err))
   }
 
+handleRouteChange = routeName => this.props.changeRoute({ routeName: routeName })
 
   render() {
-    console.log(this.state.reports)
+    const { routeName } = this.props
 
     return (
       <div className="App">
+        <div className = 'nav-bar'> 
+          <Nav/>
+        </div> 
         <ReportForm createReport= { this.createReport } />
+        
 
+
+{/*
         {this.state.reports.map((report) => {
           return (
           <div key={report.id} className='box'>
@@ -59,7 +64,7 @@ componentDidMount() {
             <h3>Temperature:</h3> <p>{report.temperature}</p>
             <h3>Conditions:</h3> <p>{report.conditions}</p>
           </div>
-        )})}
+        )})}*/}
 
       </div>
 
@@ -68,4 +73,8 @@ componentDidMount() {
   }
 }
 
-export default App;
+export default connect(
+    state => ({
+      routeName: state.route.routeName
+    })
+  , { changeRoute })(App);
