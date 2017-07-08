@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../App.css';
 import ReportForm from './ReportForm';
 import { connect } from 'react-redux';
-import { changeRoute } from '../actions/routeActions'
 import Home from './Home'
 import Nav from './Nav'
 
@@ -53,4 +52,4 @@ export default connect(
     state => ({
       routeName: state.route.routeName
     })
-  , { changeRoute })(App);
+  , )(App);

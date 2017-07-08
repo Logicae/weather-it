@@ -14,9 +14,12 @@ export default class ReportForm extends Component {
         }
     }
 
-    handleOnSubmit(event) {
-        event.preventDefault();
-        this.props.createReport(this.state)
+    handleOnSubmit(event) { 
+        event.preventDefault()
+        this.props.store.dispatch({ 
+            type: 'ADD_USER', 
+            report: this.state,
+        })
     }
 
     handleOnCityChange(event) {
