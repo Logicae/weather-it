@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const Weather = () => (
   <div>
-    <h2>About</h2>
+    <h2 className = "Weather-Header">Weather Reports</h2>
   </div>
 )
 

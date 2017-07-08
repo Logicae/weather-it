@@ -38,8 +38,6 @@ componentDidMount() {
       .catch(err => console.log(err))
   }
 
-handleRouteChange = routeName => this.props.changeRoute({ routeName: routeName })
-
   render() {
     const { routeName } = this.props
 
