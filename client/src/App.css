@@ -20,9 +20,18 @@
   font-family: avenir;
 }
 
+.About-Header {
+  background-color: #26842c;
+  height: 100%;
+  padding: 20px;
+  color: white;
+  margin: 0px;
+  font-family: avenir;
+}
+
 .Headline {
   background-color: #59a85f;
-  height: 55px;
+  height: 65px;
   padding: 60px;
   color: white;
   margin: 0px;
@@ -74,7 +83,16 @@
   border-radius: 15px;
 }
 
-.Nav-Button a{
+.Nav-Button a {
   color: #fff;
   text-decoration: none;
+}
+
+.Paragraph {
+  margin: 1em;
+  margin-left: 15em;
+  margin-right: 15em;
+  font-family: avenir;
+  font-size: 18px;
+  text-align: left;
 }
