@@ -1,7 +1,7 @@
 import React, { Component } from 'react'; 
 import '../App.css';
 
-export default class BookForm extends Component {
+export default class ReportForm extends Component {
 
     constructor(props) {
         super(props)
