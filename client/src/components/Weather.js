@@ -1,11 +1,10 @@
 import React, { Component } from 'react'; 
 
-const About = () => (
+const Weather = () => (
   <div>
     <h2>About</h2>
   </div>
 )
-
 
 {/*
         {this.state.reports.map((report) => {
@@ -17,3 +16,5 @@ const About = () => (
             <h3>Conditions:</h3> <p>{report.conditions}</p>
           </div>
         )})}*/}
+
+  export default Weather

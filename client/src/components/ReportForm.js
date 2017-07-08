@@ -46,7 +46,7 @@ export default class ReportForm extends Component {
     render() {
         return (
             <form onSubmit={(event) => this.handleOnSubmit(event)}>
-                <h2 className = "App-header">
+                <h2 className = "Form-Header">
                     Report Local Weather
                 </h2>
 
