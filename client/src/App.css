@@ -1,33 +1,33 @@
+/*universal text*/
+
 .App {
   text-align: center;
 }
 
-.App-header {
-  background-color: #093c4f;
-  height: 100%;
-  padding: 20px;
-  color: white;
-  margin: 0px;
+.Paragraph {
+  margin: 1em;
+  margin-left: 15em;
+  margin-right: 15em;
   font-family: avenir;
+  font-size: 18px;
+  text-align: left;
 }
 
-.Form-Header {
-  background-color: #093c4f;
-  height: 100%;
-  padding: 20px;
-  color: white;
-  margin: 0px;
+
+/*weather boxes*/
+
+.box {
+  width: 40%;
+  margin: 2em;
+  padding: 2em;
+  background-color: #1c365b;
+  color: #fff;
   font-family: avenir;
+  display: inline-block;
 }
 
-.About-Header {
-  background-color: #26842c;
-  height: 100%;
-  padding: 20px;
-  color: white;
-  margin: 0px;
-  font-family: avenir;
-}
+
+/*home page*/
 
 .Headline {
   background-color: #59a85f;
@@ -62,15 +62,8 @@
   font-size: 18px; 
 }
 
-.box {
-  width: 40%;
-  margin: 2em;
-  padding: 2em;
-  background-color: #1c365b;
-  color: #fff;
-  font-family: avenir;
-  display: inline-block;
-}
+
+/*nav*/
 
 .Nav-Button {
   background-color: #0386b7;
@@ -88,11 +81,32 @@
   text-decoration: none;
 }
 
-.Paragraph {
-  margin: 1em;
-  margin-left: 15em;
-  margin-right: 15em;
+
+/*page headers*/
+
+.Form-Header {
+  background-color: #093c4f;
+  height: 100%;
+  padding: 20px;
+  color: white;
+  margin: 0px;
   font-family: avenir;
-  font-size: 18px;
-  text-align: left;
+}
+
+.About-Header {
+  background-color: #26842c;
+  height: 100%;
+  padding: 20px;
+  color: white;
+  margin: 0px;
+  font-family: avenir;
+}
+
+.Weather-Header {
+  background-color: #ad0110;
+  height: 100%;
+  padding: 20px;
+  color: white;
+  margin: 0px;
+  font-family: avenir;
 }
