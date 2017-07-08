@@ -15,6 +15,7 @@ const Nav = () => (
       <Route exact path="/" component={Home}/>
       <Route exact path="/submit" component={Submit}/>
       <Route exact path="/weather" component={Weather}/>
+      <Route exact path="/about" component={About}/>
     </div>
   </Router>
 )

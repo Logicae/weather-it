@@ -4,13 +4,43 @@
 
 .App-header {
   background-color: #59a85f;
-  height: 28px;
+  height: 100%;
   padding: 20px;
   color: white;
+  margin: 0px;
 }
 
-.App-intro {
-  font-size: large;
+.Headline {
+  background-color: #59a85f;
+  height: 55px;
+  padding: 60px;
+  color: white;
+  margin: 0px;
+  box-shadow: 5px 5px 5px 5px;
+  font-size: 50px; 
+  font-family: avenir;
+}
+
+.Sub-Headline {
+  background-color: #ef7c39;
+  height: 30px;
+  padding: 40px;
+  padding-bottom: 35px;
+  color: #fff;
+  margin: 0px;
+  box-shadow: 5px 5px 5px 5px;
+  font-family: avenir;
+}
+
+.Home-Text {
+  background-color: #3c8db2;
+  height: 200px;
+  padding: 40px;
+  color: #fff;
+  margin: 0px;
+  box-shadow: 5px 5px 5px 5px;
+  font-family: avenir;
+  font-size: 18px; 
 }
 
 .box {
