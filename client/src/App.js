@@ -45,7 +45,6 @@ handleRouteChange = routeName => this.props.changeRoute({ routeName: routeName }
     return (
       <div className="App">
         <div className = 'nav-bar'> 
-          <Nav />
         </div> 
         <ReportForm createReport= { this.createReport } />
         
