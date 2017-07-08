@@ -14,8 +14,9 @@ const Nav = () => (
   <Router>
     <div>
         <button><Link to="/">Home</Link></button>
-        <li><Link to="/submit">Submit Local Weather</Link></li>
-        <li><Link to="/weather">Weather Stream</Link></li>
+        <button><Link to="/form">Submit Local Weather</Link></button>
+        <button><Link to="/weather">Weather Stream</Link></button>
+        <button><Link to="/about">Weather Stream</Link></button>
 
       <hr/>
 
