@@ -4,7 +4,7 @@ import ReportForm from './ReportForm';
 import { connect } from 'react-redux';
 import { changeRoute } from '../actions/routeActions'
 import Home from './Home'
-
+import Nav from './Nav'
 
 class App extends Component {
 
@@ -45,9 +45,7 @@ handleRouteChange = routeName => this.props.changeRoute({ routeName: routeName }
 
     return (
       <div className="App">
-        <div className = 'nav-bar'> 
-          <Home />
-        </div> 
+        <Nav />
       </div>
 
     )
