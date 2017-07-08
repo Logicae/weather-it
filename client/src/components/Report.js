@@ -1,6 +1,6 @@
 import React, { Component } from 'react'; 
 
-const Weather = () => (
+const Report = () => (
   <div>
     <h2 className = "Weather-Header">Weather Reports</h2>
   </div>
@@ -17,4 +17,4 @@ const Weather = () => (
           </div>
         )})}*/}
 
-  export default Weather
+  export default Report

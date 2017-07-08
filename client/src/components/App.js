@@ -45,9 +45,7 @@ componentDidMount() {
       <div className="App">
         <Nav />
       </div>
-
     )
-
   }
 }
 
