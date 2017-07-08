@@ -3,11 +3,21 @@
 }
 
 .App-header {
-  background-color: #59a85f;
+  background-color: #093c4f;
   height: 100%;
   padding: 20px;
   color: white;
   margin: 0px;
+  font-family: avenir;
+}
+
+.Form-Header {
+  background-color: #093c4f;
+  height: 100%;
+  padding: 20px;
+  color: white;
+  margin: 0px;
+  font-family: avenir;
 }
 
 .Headline {
@@ -49,5 +59,22 @@
   padding: 2em;
   background-color: #1c365b;
   color: #fff;
+  font-family: avenir;
   display: inline-block;
+}
+
+.Nav-Button {
+  background-color: #0386b7;
+  padding: 20px;
+  color: #fff;
+  font-family: avenir;
+  font-size: 18px; 
+  margin: .5em;
+  border:  none;
+  border-radius: 15px;
+}
+
+.Nav-Button a{
+  color: #fff;
+  text-decoration: none;
 }
