@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
-import ReportForm from './components/ReportForm';
+import '../App.css';
+import ReportForm from './ReportForm';
 import { connect } from 'react-redux';
-import { changeRoute } from './actions/routeActions'
+import { changeRoute } from '../actions/routeActions'
 
 
 class App extends Component {
