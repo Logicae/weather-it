@@ -14,9 +14,9 @@ const Nav = () => (
   <Router>
     <div>
         <button className='Nav-Button'><Link to="/">Home</Link></button>
-        <button className='Nav-Button'><Link to="/form">Submit Local Weather</Link></button>
+        <button className='Nav-Button'><Link to="/form">Submit Weather Report</Link></button>
         <button className='Nav-Button'><Link to="/weather">Weather Stream</Link></button>
-        <button className='Nav-Button'><Link to="/about">Weather Stream</Link></button>
+        <button className='Nav-Button'><Link to="/about">About WeatherIt</Link></button>
 
       <hr/>
 
