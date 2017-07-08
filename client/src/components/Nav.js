@@ -18,7 +18,8 @@ const Nav = () => (
         <button className='Nav-Button'><Link to="/reports">Weather Stream</Link></button>
         <button className='Nav-Button'><Link to="/about">About WeatherIt</Link></button>
 
-      <hr/>
+      <br/>
+      <br/>
 
       <Route exact path="/" component={Home}/>
       <Route exact path="/form" component={ReportForm}/>
