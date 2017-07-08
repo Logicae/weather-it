@@ -110,3 +110,16 @@
   margin: 0px;
   font-family: avenir;
 }
+
+.Weather-Form {
+  font-family: avenir;
+  font-size: 20px;
+  border: solid 4px #eee;
+  margin: 4em;
+  margin-left: 20em;
+  margin-right: 20em;
+  text-align: left;
+  padding: 2em;
+  padding-left: 7em;
+  padding-right: 7em;
+}

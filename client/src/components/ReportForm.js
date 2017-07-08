@@ -45,55 +45,57 @@ export default class ReportForm extends Component {
 
     render() {
         return (
-            <form onSubmit={(event) => this.handleOnSubmit(event)}>
+            <div>
                 <h2 className = "Form-Header">
                     Report Local Weather
                 </h2>
+                <form  className = "Weather-Form" onSubmit={(event) => this.handleOnSubmit(event)}>
 
-                <p>
-                    <label>City: </label>
-                    <input 
-                        type="text"
-                        onChange={event => this.handleOnCityChange(event)}
-                        value={this.state.city}
-                        placeholder="enter city"
-                    />
-                </p>
+                    <p>
+                        <label>City: </label>
+                        <input 
+                            type="text"
+                            onChange={event => this.handleOnCityChange(event)}
+                            value={this.state.city}
+                            placeholder="enter city"
+                        />
+                    </p>
 
-                <p>
-                    <label>State: </label>
-                    <input 
-                        type="text"
-                        onChange={event => this.handleOnStateChange(event)}
-                        value={this.state.state}
-                        placeholder="enter state"
-                    />
-                </p>
+                    <p>
+                        <label>State: </label>
+                        <input 
+                            type="text"
+                            onChange={event => this.handleOnStateChange(event)}
+                            value={this.state.state}
+                            placeholder="enter state"
+                        />
+                    </p>
 
-                <p>
-                    <label>Temperature: </label>
-                    <input 
-                        type="text"
-                        onChange={event => this.handleOnTemperatureChange(event)}
-                        value={this.state.temperature}
-                        placeholder="enter temperature"
-                    />
-                </p>
+                    <p>
+                        <label>Temperature: </label>
+                        <input 
+                            type="text"
+                            onChange={event => this.handleOnTemperatureChange(event)}
+                            value={this.state.temperature}
+                            placeholder="enter temperature"
+                        />
+                    </p>
 
-                <p>
-                    <label>Conditions: </label>
-                    <input 
-                        type="text"
-                        onChange={event => this.handleOnConditionsChange(event)}
-                        value={this.state.conditions}
-                        placeholder="enter current conditions"
-                    />
-                </p>
+                    <p>
+                        <label>Conditions: </label>
+                        <input 
+                            type="text"
+                            onChange={event => this.handleOnConditionsChange(event)}
+                            value={this.state.conditions}
+                            placeholder="enter current conditions"
+                        />
+                    </p>
 
-                <p>
-                    <input type="submit" value="Report Weather"/>
-                </p>
-            </form>
+                    <p>
+                        <input type="submit" value="Report Weather"/>
+                    </p>
+                </form>
+            </div>
         )
     }
 }
