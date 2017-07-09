@@ -1,5 +1,7 @@
 import React, { Component } from 'react'; 
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actions from '../actions/reportActions'
 
 class Report extends Component {
   render() {
@@ -21,7 +23,4 @@ function mapStateToProps(state) {
 export default connect(mapStateToProps)(Report);
 
 
-
-// import { bindActionCreators } from 'redux';
 // import ReportsList from './ReportsList'
-// import * as actions from '../actions/reportActions'
