@@ -1,13 +1,9 @@
 import React, { Component } from 'react'; 
 
-const Report = () => (
+const Report = ({ reports }) => (
   <div>
     <h2 className = "Weather-Header">Weather Reports</h2>
-  </div>
-)
-
-{/*
-        {this.state.reports.map((report) => {
+        {reports.map(report => {
           return (
           <div key={report.id} className='box'>
             <h3>City:</h3> <p>{report.city}</p>
@@ -15,6 +11,8 @@ const Report = () => (
             <h3>Temperature:</h3> <p>{report.temperature}</p>
             <h3>Conditions:</h3> <p>{report.conditions}</p>
           </div>
-        )})}*/}
+        )})}
+  </div>
+)
 
-  export default Report
+export default Report
