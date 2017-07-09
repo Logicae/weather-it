@@ -4,6 +4,10 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../actions/reportActions'
 
 class Report extends Component {
+  componentWillMount() {
+    this.props.actions.loadReports();
+  }
+  
   render() {
     const reports = this.props.reports
     return(
@@ -20,7 +24,10 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(Report);
+function mapDispatchToProps(dispatch) {
+  return {actions: bindActionCreators(actions, dispatch)}
+}
 
+export default connect(mapStateToProps, mapDispatchToProps)(Report);
 
 // import ReportsList from './ReportsList'
