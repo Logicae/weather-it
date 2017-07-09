@@ -4,7 +4,8 @@ class ReportApi {
       return response.json();
     }).catch(error => {
       return error;
-    });
+    })
   }
+}
 
-export default ReportApi;  
+export default ReportApi;
