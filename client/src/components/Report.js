@@ -1,31 +1,27 @@
 import React, { Component } from 'react'; 
 import { connect } from 'react-redux';
-import ReportsList from './ReportsList'
 
 class Report extends Component {
-  this.props.actions.getAllReports();
-
   render() {
     const reports = this.props.reports
     return(
     <div>
       <h2 className = "Weather-Header">Weather Reports</h2>
-      <ReportsList  reports={reports}/>
+      {console.log({reports})} 
     </div>
     )}
 }
 
-
 function mapStateToProps(state) {  
-  if (state.reports.length > 0) {
-    return {
-      reports: state.reports
-    };
-  } else {
-    return {
-      reports: [{city: '', state: '', temperature: '', conditions: ''}]
-    }
+  return {
+    reports: state.reports
   }
 }
 
 export default connect(mapStateToProps)(Report);
+
+
+
+// import { bindActionCreators } from 'redux';
+// import ReportsList from './ReportsList'
+// import * as actions from '../actions/reportActions'
