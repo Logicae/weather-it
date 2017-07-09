@@ -1,4 +1,4 @@
-import React, { Component } from 'react'; 
+import React from 'react'; 
 import {
   BrowserRouter as Router,
   Route,
@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'
 import About from './About'
 import ReportForm from './ReportForm'
-import Report from './Report'
+import ReportsList from './ReportsList'
 import Home from './Home'
 import '../App.css';
 
@@ -23,7 +23,7 @@ const Nav = () => (
 
       <Route exact path="/" component={Home}/>
       <Route exact path="/form" component={ReportForm}/>
-      <Route exact path="/reports" component={Report}/>
+      <Route exact path="/reports" component={ReportsList}/>
       <Route exact path="/about" component={About}/>
     </div>
   </Router>
