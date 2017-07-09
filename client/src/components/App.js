@@ -10,7 +10,7 @@ class App extends Component {
 constructor() {
   super()
 
-  this.createReport = this.createReport.bind(this)
+
 }
 
   render() {
@@ -26,6 +26,5 @@ constructor() {
 
 export default connect(
     state => ({
-      routeName: state.route.routeName
     })
   , )(App);
