@@ -1,6 +1,6 @@
-// import initialState from './initialState'
+import initialState from './initialState'
 
-export default function reportsReducer(state = [], action) {  
+export default function reportsReducer(state = initialState.reports, action) {  
     switch(action.type) {
         case 'LOAD_REPORTS_SUCCESS':
             return action.reports
