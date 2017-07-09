@@ -25,7 +25,7 @@ export function createReport(report) {
     }).catch(error => {
       throw(error);
     });
-  };
+  }; 
 }
 
 export function loadReportsSuccess(reports) {  
