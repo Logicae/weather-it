@@ -1,6 +1,5 @@
 import ReportApi from '../components/ReportApi'
 
-
 const loadReports = () => {  
   return function(dispatch) {
     return ReportApi.getAllReports().then(reports => {
@@ -9,7 +8,7 @@ const loadReports = () => {
   }
 }
 
-const createReport = report => {
+const createReport = (report) => {
   return function (dispatch) {
     return ReportApi.createReport(report).then(responseReport => {
       dispatch(createReportSuccess(responseReport));
@@ -18,7 +17,7 @@ const createReport = report => {
   }; 
 }
 
-const loadReportsSuccess = (reports) => {  
+function loadReportsSuccess(reports) {  
   return {type: 'LOAD_REPORTS_SUCCESS', reports};
 }
 
@@ -30,6 +29,6 @@ const createReportSuccess = (report) => {
 export {
   loadReports,
   createReport,
-  loadReportsSuccess,
-  createReportSuccess
+  createReportSuccess,
+  loadReportsSuccess
 }
