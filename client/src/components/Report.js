@@ -1,18 +1,31 @@
 import React, { Component } from 'react'; 
+import { connect } from 'react-redux';
+import ReportsList from './ReportsList'
 
-const Report = ({ reports }) => (
-  <div>
-    <h2 className = "Weather-Header">Weather Reports</h2>
-        {reports.map(report => {
-          return (
-          <div key={report.id} className='box'>
-            <h3>City:</h3> <p>{report.city}</p>
-            <h3>State:</h3> <p>{report.state}</p>
-            <h3>Temperature:</h3> <p>{report.temperature}</p>
-            <h3>Conditions:</h3> <p>{report.conditions}</p>
-          </div>
-        )})}
-  </div>
-)
+class Report extends Component {
+  this.props.actions.getAllReports();
 
-export default Report
+  render() {
+    const reports = this.props.reports
+    return(
+    <div>
+      <h2 className = "Weather-Header">Weather Reports</h2>
+      <ReportsList  reports={reports}/>
+    </div>
+    )}
+}
+
+
+function mapStateToProps(state) {  
+  if (state.reports.length > 0) {
+    return {
+      reports: state.reports
+    };
+  } else {
+    return {
+      reports: [{city: '', state: '', temperature: '', conditions: ''}]
+    }
+  }
+}
+
+export default connect(mapStateToProps)(Report);
