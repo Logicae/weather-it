@@ -10,6 +10,7 @@ class ReportApi {
         .then(response => response.json())
         .catch(err => console.log(err))
   }
+  
   static createReport(newReport) {
       return fetch('/reports', {
         method: 'POST',
