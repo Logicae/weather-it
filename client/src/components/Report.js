@@ -5,7 +5,6 @@ import * as action from '../actions/reportActions'
 import ReportsList from './ReportsList'
 
 class Report extends Component {
-
   render() {
     const reports = this.props.reports
     {console.log(reports)}
@@ -15,7 +14,6 @@ class Report extends Component {
     </div>
     )}
   }
-
 
 function mapStateToProps(state) {  
   if (state.reportsReducer.length > 0) {
