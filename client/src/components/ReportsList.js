@@ -1,5 +1,4 @@
-import React, { Component } from 'react'; 
-import Report from './Report'
+import React from 'react'; 
 
 const ReportsList = ({reports}) => {
     return(
