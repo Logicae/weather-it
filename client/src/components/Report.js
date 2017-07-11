@@ -24,10 +24,4 @@ function mapStateToProps(state) {
   }
 }
 
-// function mapDispatchToProps(dispatch) {
-//   return {action: bindActionCreators(action, dispatch)}
-// }
-
 export default connect(mapStateToProps)(Report)
-
-// import ReportsList from './ReportsList'
