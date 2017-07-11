@@ -17,7 +17,6 @@ const Nav = () => (
         <button className='Nav-Button'><Link to="/form">Submit Weather Report</Link></button>
         <button className='Nav-Button'><Link to="/reports">Weather Stream</Link></button>
         <button className='Nav-Button'><Link to="/about">About WeatherIt</Link></button>
-
       <br/>
       <br/>
 

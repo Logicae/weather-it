@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import '../App.css'
 import App from './App'
 import Report from './Report'
-import ReportApi from '../components/ReportApi'
-
 
 class ReportForm extends Component {
 
@@ -55,7 +53,6 @@ class ReportForm extends Component {
     } 
 
     handleOnSubmit(event) {
-        event.preventDefault()
         this.createNewReport(this.state)
         this.refs.reportForm.reset()
     }

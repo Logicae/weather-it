@@ -120,3 +120,10 @@
   padding-left: 7em;
   padding-right: 7em;
 }
+
+.Bottom-Page {
+  font-family: avenir;
+  margin-top: 10em;
+  border-top: solid 2px #eee;
+  padding-top: 2em;
+}
