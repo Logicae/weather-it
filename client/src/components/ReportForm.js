@@ -1,107 +1,122 @@
 import React, { Component } from 'react'
 import '../App.css'
-import { Field, reduxForm } from 'redux-form'
+import App from './App'
+import Report from './Report'
+import ReportApi from '../components/ReportApi'
+
 
 class ReportForm extends Component {
+
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            reports: []
+        }
+         this.createNewReport = this.createNewReport.bind(this)
+  }
+  
+    handleOnCityChange(event) {
+        this.setState({
+            city: event.target.value
+        })
+    }
+
+    handleOnStateChange(event) {
+        this.setState({
+            state: event.target.value
+        })
+    }
+
+    handleOnTemperatureChange(event) {
+        this.setState({
+            temperature: event.target.value
+        })
+    }
+
+    handleOnConditionsChange(event) {
+        this.setState({
+            conditions: event.target.value
+        })
+    }
+
+    createNewReport(newReport) {
+        return fetch('/reports', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+                },
+                    body: JSON.stringify(newReport)
+                })
+            .then(response => response.json())
+            .then(report => this.setState({
+                reports: this.state.reports.concat(report)
+                }))
+    } 
+
+    handleOnSubmit(event) {
+        event.preventDefault()
+        this.createNewReport(this.state)
+        this.refs.reportForm.reset()
+    }
+
     render() {
-  const { handleSubmit } = this.props
-  return (
-    <div>
-        <h2 className = "Form-Header">
-            Report Local Weather
-        </h2>
-        <form className='Weather-Form' onSubmit={ handleSubmit }>
-            <p>
-                <label htmlFor="city">City </label>
-                <Field name="city" component="input" type="text" />
-            </p>
-            <p>
-                <label htmlFor="state">State </label>
-                <Field name="state" component="input" type="text" />
-            </p>
-            <p>
-                <label htmlFor="temperature">Temperature </label>
-                <Field name="temperature" component="input" type="text" />
-            </p>
-            <p>
-                <label htmlFor="conditions">Conditions </label>
-                <Field name="conditions" component="input" type="text" />
-            </p>
-            <button type="submit">Submit Weather Report</button>
-        </form>
-    </div>
-  )
-}
-}
+        return (
+            <div>
+                <h2 className = "Form-Header">
+                    Report Local Weather
+                </h2>
+                <form  ref='reportForm' className = "Weather-Form" onSubmit={(event) => this.handleOnSubmit(event)}>
 
-ReportForm = reduxForm({
-  // a unique name for the form
-  form: 'report'
-})(ReportForm)
+                    <p>
+                        <label>City: </label>
+                        <input 
+                            type="text"
+                            onChange={event => this.handleOnCityChange(event)}
+                            value={this.props.city}
+                            placeholder="enter city"
+                        />
+                    </p>
 
-const mapStateToProps = (state) => {
-  {alert.log(state)}
+                    <p>
+                        <label>State: </label>
+                        <input 
+                            type="text"
+                            onChange={event => this.handleOnStateChange(event)}
+                            value={this.props.state}
+                            placeholder="enter state"
+                        />
+                    </p>
+
+                    <p>
+                        <label>Temperature: </label>
+                        <input 
+                            type="text"
+                            onChange={event => this.handleOnTemperatureChange(event)}
+                            value={this.props.temperature}
+                            placeholder="enter temperature"
+                        />
+                    </p>
+
+                    <p>
+                        <label>Conditions: </label>
+                        <input 
+                            type="text"
+                            onChange={event => this.handleOnConditionsChange(event)}
+                            value={this.props.conditions}
+                            placeholder="enter current conditions"
+                        />
+                    </p>
+
+                    <p>
+                        <input type="submit" 
+                        value="Report Weather"
+                        />
+                    </p>
+                </form>
+            </div>
+        )
+    }
 }
 
 export default ReportForm
-
-
-
-    // render() {
-    //     return (
-    //         <div>
-    //             <h2 className = "Form-Header">
-    //                 Report Local Weather
-    //             </h2>
-    //             <form  className = "Weather-Form" onSubmit={(event) => this.handleOnSubmit(event)}>
-
-    //                 <p>
-    //                     <label>City: </label>
-    //                     <input 
-    //                         type="text"
-    //                         onChange={this.props.onChange}
-    //                         value={this.props.city}
-    //                         placeholder="enter city"
-    //                     />
-    //                 </p>
-
-    //                 <p>
-    //                     <label>State: </label>
-    //                     <input 
-    //                         type="text"
-    //                         onChange={this.props.onChange}
-    //                         value={this.props.state}
-    //                         placeholder="enter state"
-    //                     />
-    //                 </p>
-
-    //                 <p>
-    //                     <label>Temperature: </label>
-    //                     <input 
-    //                         type="text"
-    //                         onChange={this.props.onChange}
-    //                         value={this.props.temperature}
-    //                         placeholder="enter temperature"
-    //                     />
-    //                 </p>
-
-    //                 <p>
-    //                     <label>Conditions: </label>
-    //                     <input 
-    //                         type="text"
-    //                         onChange={this.props.onChange}
-    //                         value={this.props.conditions}
-    //                         placeholder="enter current conditions"
-    //                     />
-    //                 </p>
-
-    //                 <p>
-    //                     <input type="submit" 
-    //                     value="Report Weather"
-    //                     onSubmit={this.props.onSave}
-    //                     />
-    //                 </p>
-    //             </form>
-    //         </div>
-    //     )
-    // }
