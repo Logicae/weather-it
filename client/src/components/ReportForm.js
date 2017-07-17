@@ -49,12 +49,14 @@ class ReportForm extends Component {
             .then(response => response.json())
             .then(report => this.setState({
                 reports: this.state.reports.concat(report)
-                }))
+            }))
+            .then(window.location.reload())
     } 
 
     handleOnSubmit(event) {
         this.createNewReport(this.state)
         this.refs.reportForm.reset()
+        event.preventDefault()
     }
 
     render() {

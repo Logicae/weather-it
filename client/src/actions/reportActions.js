@@ -14,7 +14,7 @@ const createReport = (report) => {
       dispatch(createReportSuccess(responseReport));
       return responseReport;
     })
-  }; 
+  }
 }
 
 function loadReportsSuccess(reports) {  
